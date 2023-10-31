@@ -12,7 +12,7 @@ namespace car_dealership
     {
         public static MySqlConnection GetConnection()
         {
-            string sql = "datasource=localhost;port=3306;username=root;password=3w2s1x4x5x;database=autocar";
+            string sql = "datasource=26.176.43.176;port=3306;username=denis;password=123456781;database=autocar";
             MySqlConnection con = new MySqlConnection(sql);
             try
             {
