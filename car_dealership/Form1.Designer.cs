@@ -30,7 +30,6 @@ namespace car_dealership
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
             this.log_box = new System.Windows.Forms.TextBox();
             this.pas_box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,16 +43,6 @@ namespace car_dealership
             ((System.ComponentModel.ISupportInitialize)(this.hidepas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showpas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(48, 389);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // log_box
             // 
@@ -168,6 +157,7 @@ namespace car_dealership
             // reg
             // 
             this.reg.ActiveLinkColor = System.Drawing.Color.DimGray;
+            this.reg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.reg.AutoSize = true;
             this.reg.BackColor = System.Drawing.Color.Transparent;
             this.reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -198,7 +188,6 @@ namespace car_dealership
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pas_box);
             this.Controls.Add(this.log_box);
-            this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -210,8 +199,6 @@ namespace car_dealership
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox log_box;
         private System.Windows.Forms.TextBox pas_box;
         private System.Windows.Forms.Label label1;

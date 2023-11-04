@@ -17,15 +17,6 @@ namespace car_dealership
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MySqlConnection con = conn.GetConnection();
-            string sql = $"INSERT INTO Types_car (name_types) VALUES ('sedan')";
-            MySqlCommand cmd = new MySqlCommand(sql, con);
-            int number = cmd.ExecuteNonQuery();
-        }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
