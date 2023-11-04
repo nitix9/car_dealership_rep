@@ -16,5 +16,10 @@ namespace car_dealership
         {
             InitializeComponent();
         }
+
+        private void user_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

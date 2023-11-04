@@ -43,12 +43,13 @@ namespace car_dealership
             this.phone = new System.Windows.Forms.Label();
             this.pasww = new System.Windows.Forms.Label();
             this.create_but = new System.Windows.Forms.Button();
+            this.back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lastt_name
             // 
             this.lastt_name.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lastt_name.Location = new System.Drawing.Point(137, 123);
+            this.lastt_name.Location = new System.Drawing.Point(135, 102);
             this.lastt_name.Name = "lastt_name";
             this.lastt_name.Size = new System.Drawing.Size(100, 20);
             this.lastt_name.TabIndex = 0;
@@ -56,7 +57,7 @@ namespace car_dealership
             // namee
             // 
             this.namee.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.namee.Location = new System.Drawing.Point(137, 158);
+            this.namee.Location = new System.Drawing.Point(135, 136);
             this.namee.Name = "namee";
             this.namee.Size = new System.Drawing.Size(100, 20);
             this.namee.TabIndex = 1;
@@ -64,7 +65,7 @@ namespace car_dealership
             // patronymicc
             // 
             this.patronymicc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.patronymicc.Location = new System.Drawing.Point(137, 194);
+            this.patronymicc.Location = new System.Drawing.Point(135, 170);
             this.patronymicc.Name = "patronymicc";
             this.patronymicc.Size = new System.Drawing.Size(100, 20);
             this.patronymicc.TabIndex = 2;
@@ -72,7 +73,7 @@ namespace car_dealership
             // adresss
             // 
             this.adresss.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.adresss.Location = new System.Drawing.Point(137, 230);
+            this.adresss.Location = new System.Drawing.Point(135, 204);
             this.adresss.Name = "adresss";
             this.adresss.Size = new System.Drawing.Size(100, 20);
             this.adresss.TabIndex = 3;
@@ -80,7 +81,7 @@ namespace car_dealership
             // phonee
             // 
             this.phonee.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.phonee.Location = new System.Drawing.Point(137, 267);
+            this.phonee.Location = new System.Drawing.Point(135, 238);
             this.phonee.Name = "phonee";
             this.phonee.Size = new System.Drawing.Size(100, 20);
             this.phonee.TabIndex = 4;
@@ -88,7 +89,7 @@ namespace car_dealership
             // passwordd
             // 
             this.passwordd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.passwordd.Location = new System.Drawing.Point(137, 304);
+            this.passwordd.Location = new System.Drawing.Point(135, 272);
             this.passwordd.Name = "passwordd";
             this.passwordd.Size = new System.Drawing.Size(100, 20);
             this.passwordd.TabIndex = 5;
@@ -99,7 +100,7 @@ namespace car_dealership
             this.last_name.AutoSize = true;
             this.last_name.BackColor = System.Drawing.Color.Transparent;
             this.last_name.ForeColor = System.Drawing.Color.White;
-            this.last_name.Location = new System.Drawing.Point(72, 130);
+            this.last_name.Location = new System.Drawing.Point(66, 106);
             this.last_name.Name = "last_name";
             this.last_name.Size = new System.Drawing.Size(59, 13);
             this.last_name.TabIndex = 6;
@@ -111,7 +112,7 @@ namespace car_dealership
             this.name.AutoSize = true;
             this.name.BackColor = System.Drawing.Color.Transparent;
             this.name.ForeColor = System.Drawing.Color.White;
-            this.name.Location = new System.Drawing.Point(96, 165);
+            this.name.Location = new System.Drawing.Point(93, 141);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(35, 13);
             this.name.TabIndex = 7;
@@ -123,7 +124,7 @@ namespace car_dealership
             this.patronymic.AutoSize = true;
             this.patronymic.BackColor = System.Drawing.Color.Transparent;
             this.patronymic.ForeColor = System.Drawing.Color.White;
-            this.patronymic.Location = new System.Drawing.Point(76, 201);
+            this.patronymic.Location = new System.Drawing.Point(68, 174);
             this.patronymic.Name = "patronymic";
             this.patronymic.Size = new System.Drawing.Size(60, 13);
             this.patronymic.TabIndex = 8;
@@ -135,7 +136,7 @@ namespace car_dealership
             this.adress.AutoSize = true;
             this.adress.BackColor = System.Drawing.Color.Transparent;
             this.adress.ForeColor = System.Drawing.Color.White;
-            this.adress.Location = new System.Drawing.Point(84, 237);
+            this.adress.Location = new System.Drawing.Point(78, 208);
             this.adress.Name = "adress";
             this.adress.Size = new System.Drawing.Size(47, 13);
             this.adress.TabIndex = 9;
@@ -147,7 +148,7 @@ namespace car_dealership
             this.phone.AutoSize = true;
             this.phone.BackColor = System.Drawing.Color.Transparent;
             this.phone.ForeColor = System.Drawing.Color.White;
-            this.phone.Location = new System.Drawing.Point(80, 274);
+            this.phone.Location = new System.Drawing.Point(70, 242);
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(55, 13);
             this.phone.TabIndex = 10;
@@ -159,7 +160,7 @@ namespace car_dealership
             this.pasww.AutoSize = true;
             this.pasww.BackColor = System.Drawing.Color.Transparent;
             this.pasww.ForeColor = System.Drawing.Color.White;
-            this.pasww.Location = new System.Drawing.Point(84, 311);
+            this.pasww.Location = new System.Drawing.Point(77, 276);
             this.pasww.Name = "pasww";
             this.pasww.Size = new System.Drawing.Size(51, 13);
             this.pasww.TabIndex = 11;
@@ -171,13 +172,27 @@ namespace car_dealership
             this.create_but.BackColor = System.Drawing.Color.Black;
             this.create_but.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.create_but.ForeColor = System.Drawing.Color.White;
-            this.create_but.Location = new System.Drawing.Point(109, 337);
+            this.create_but.Location = new System.Drawing.Point(106, 311);
             this.create_but.Name = "create_but";
             this.create_but.Size = new System.Drawing.Size(155, 37);
             this.create_but.TabIndex = 12;
             this.create_but.Text = "Создать аккаунт";
             this.create_but.UseVisualStyleBackColor = false;
             this.create_but.Click += new System.EventHandler(this.create_but_Click);
+            // 
+            // back
+            // 
+            this.back.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.back.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back.ForeColor = System.Drawing.Color.White;
+            this.back.Location = new System.Drawing.Point(145, 354);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(75, 23);
+            this.back.TabIndex = 13;
+            this.back.Text = "Отмена";
+            this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // registration
             // 
@@ -186,6 +201,7 @@ namespace car_dealership
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(365, 450);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.create_but);
             this.Controls.Add(this.pasww);
             this.Controls.Add(this.phone);
@@ -199,8 +215,12 @@ namespace car_dealership
             this.Controls.Add(this.patronymicc);
             this.Controls.Add(this.namee);
             this.Controls.Add(this.lastt_name);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "registration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "registration";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.registration_FormClosed);
             this.Load += new System.EventHandler(this.registration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -222,5 +242,6 @@ namespace car_dealership
         private System.Windows.Forms.Label phone;
         private System.Windows.Forms.Label pasww;
         private System.Windows.Forms.Button create_but;
+        private System.Windows.Forms.Button back;
     }
 }

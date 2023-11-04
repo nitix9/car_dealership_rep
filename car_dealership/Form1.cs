@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 
 namespace car_dealership
 {
@@ -26,17 +27,19 @@ namespace car_dealership
         {
             if (user.Checked == true)
             {
-                string log_verify = log_box.Text;
-                string pas_verify = pas_box.Text;
-                MySqlConnection con = conn.GetConnection();
-                string sql = $"SELECT mobile_phone,password FROM users WHERE mobile_phone LIKE @mobile_phone AND password LIKE @password AND id_roles=1";
-                MySqlCommand cmd1 = new MySqlCommand(sql, con);
-                cmd1.Parameters.Add("@mobile_phone", MySqlDbType.VarChar).Value = log_verify;
-                cmd1.Parameters.Add("@password", MySqlDbType.VarChar).Value = pas_verify;
-                try
-                {
-                    object passw_verify = cmd1.ExecuteScalar();
-                    if (passw_verify != null)
+                try 
+                { 
+                    string log_verify = log_box.Text;
+                    string pas_verify = pas_box.Text;
+                    MySqlConnection con = conn.GetConnection();
+                    string sql = $"SELECT mobile_phone,password FROM users WHERE mobile_phone LIKE @mobile_phone AND id_roles=1";
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(sql, con);
+                    DataTable TableUsers = new DataTable();
+                    adapter.SelectCommand.Parameters.Add("@mobile_phone", MySqlDbType.VarChar).Value = log_verify;
+                    adapter.Fill(TableUsers);
+                    string get_pass = TableUsers.Rows[0]["password"].ToString();
+                    bool t2 = BCrypt.Net.BCrypt.Verify(pas_verify, get_pass);            
+                    if (t2 == true)
                     {
                         MessageBox.Show("Успешно", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
@@ -50,7 +53,7 @@ namespace car_dealership
                 }
                 catch
                 {
-
+                    MessageBox.Show("Неверные данные, вход невозможен", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
@@ -59,14 +62,16 @@ namespace car_dealership
                 string log_verify = log_box.Text;
                 string pas_verify = pas_box.Text;
                 MySqlConnection con = conn.GetConnection();
-                string sql = $"SELECT mobile_phone,password FROM users WHERE mobile_phone LIKE @mobile_phone AND password LIKE @password AND id_roles=2";
-                MySqlCommand cmd1 = new MySqlCommand(sql, con);
-                cmd1.Parameters.Add("@mobile_phone", MySqlDbType.VarChar).Value = log_verify;
-                cmd1.Parameters.Add("@password", MySqlDbType.VarChar).Value = pas_verify;
+                string sql = $"SELECT mobile_phone,password FROM users WHERE mobile_phone LIKE @mobile_phone AND id_roles=2";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(sql, con);
+                DataTable TableUsers = new DataTable();
+                adapter.SelectCommand.Parameters.Add("@mobile_phone", MySqlDbType.VarChar).Value = log_verify;
+                adapter.Fill(TableUsers);
+                string get_pass = TableUsers.Rows[0]["password"].ToString();
+                bool t3 = BCrypt.Net.BCrypt.Verify(pas_verify, get_pass);
                 try
                 {
-                    object passw_verify = cmd1.ExecuteScalar();
-                    if (passw_verify != null)
+                    if (t3 == true)
                     {
                         MessageBox.Show("Успешно", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
@@ -82,6 +87,10 @@ namespace car_dealership
                 {
 
                 }
+            }
+            else
+            {
+                MessageBox.Show("Выберите роль!","Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -110,6 +119,11 @@ namespace car_dealership
             registration frm_registr = new registration();
             frm_registr.Show();
             this.Hide();
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
