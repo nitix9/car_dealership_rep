@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using BCrypt.Net;
 
 namespace car_dealership
 {
@@ -32,6 +33,8 @@ namespace car_dealership
                 string reg_adress = adresss.Text;
                 string reg_phone = phonee.Text;
                 string reg_pas = passwordd.Text;
+                string pass = BCrypt.Net.BCrypt.HashPassword(reg_pas);
+                bool t1 = BCrypt.Net.BCrypt.Verify(reg_pas, pass);
                 MySqlConnection con = conn.GetConnection();
                 string sql = $"INSERT INTO users (last_name,name,patronymic,adress,mobile_phone,password,id_roles) VALUES (@last_name,@name,@patronymic,@adress,@mobile_phone,@password,1)";
                 MySqlCommand cmd2 = new MySqlCommand(sql, con);
@@ -40,12 +43,12 @@ namespace car_dealership
                 cmd2.Parameters.Add("@patronymic", MySqlDbType.VarChar).Value = reg_patronymic;
                 cmd2.Parameters.Add("@adress", MySqlDbType.VarChar).Value = reg_adress;
                 cmd2.Parameters.Add("@mobile_phone", MySqlDbType.VarChar).Value = reg_phone;
-                cmd2.Parameters.Add("@password", MySqlDbType.VarChar).Value = reg_pas;
+                cmd2.Parameters.Add("@password", MySqlDbType.VarChar).Value = pass;
                 int number = cmd2.ExecuteNonQuery();
                 if (number != 0) { MessageBox.Show("Регистрация успешна", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     Form1 frm_autor = new Form1();
-                    frm_autor.Show(); ;
+                    frm_autor.Show();
                 }
                 else 
                 {
@@ -54,6 +57,18 @@ namespace car_dealership
 
             }
             catch { }
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 frm_autor = new Form1();
+            frm_autor.Show(); ;
+        }
+
+        private void registration_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
