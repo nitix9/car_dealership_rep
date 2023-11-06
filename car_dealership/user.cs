@@ -23,11 +23,6 @@ namespace car_dealership
             Application.Exit();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         public void displayUser() 
         {
             conn.display("select number,brand,model,year_release,id_types,cost from cars", dataGridView1);
@@ -38,9 +33,16 @@ namespace car_dealership
             displayUser();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            conn.display("select number,brand,model,year_release,id_types,cost from cars WHERE brand LIKE'%"+ textBox1.Text +"%'", dataGridView1);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            info form = new info();
+            form.ShowDialog();
         }
     }
 }
