@@ -1,7 +1,7 @@
 ﻿
 namespace car_dealership
 {
-    partial class roles
+    partial class user_table
     {
         /// <summary>
         /// Required designer variable.
@@ -37,22 +37,22 @@ namespace car_dealership
             this.button1.Location = new System.Drawing.Point(713, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // roles
+            // user_table
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Name = "roles";
+            this.Name = "user_table";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.roles_FormClosed);
+            this.Text = "users";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.user_table_FormClosed);
             this.ResumeLayout(false);
 
         }
