@@ -147,6 +147,7 @@ namespace car_dealership
             this.id.HeaderText = "Column3";
             this.id.Name = "id";
             this.id.ReadOnly = true;
+            this.id.Visible = false;
             // 
             // Column1
             // 
