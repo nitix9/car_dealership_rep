@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,26 @@ namespace car_dealership
                 MessageBox.Show("MySQL Connection! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return con;
+        }
+
+        public static void display(string qrt, DataGridView dgv) 
+        {
+            string sql = qrt;
+
+            MySqlConnection con = GetConnection();
+
+            MySqlCommand com = new MySqlCommand(sql, con);
+
+            MySqlDataAdapter adp = new MySqlDataAdapter(com);
+
+            DataTable dt = new DataTable();
+
+            adp.Fill(dt);
+
+            dgv.DataSource = dt;
+
+            con.Close();
+        
         }
     }
 }
