@@ -67,7 +67,7 @@ namespace car_dealership
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 frm_autor = new Form1();
+            roles_table frm_autor = new roles_table();
             frm_autor.Show();
         }
 
