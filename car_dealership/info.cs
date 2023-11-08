@@ -19,7 +19,16 @@ namespace car_dealership
 
         private void info_Load(object sender, EventArgs e)
         {
+            label1.Text = carstore.dt.Rows[carstore.index][1].ToString();
+        }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void info_Shown(object sender, EventArgs e)
+        {
         }
     }
 }

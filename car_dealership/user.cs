@@ -41,6 +41,7 @@ namespace car_dealership
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            carstore.index = e.RowIndex;
             info form = new info();
             form.ShowDialog();
         }
