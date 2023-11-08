@@ -40,6 +40,8 @@ namespace car_dealership
 
             adp.Fill(dt);
 
+            carstore.dt = dt;
+
             dgv.DataSource = dt;
 
             con.Close();
