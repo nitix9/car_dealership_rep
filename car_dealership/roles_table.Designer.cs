@@ -35,7 +35,7 @@ namespace car_dealership
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.addbt = new System.Windows.Forms.Button();
             this.rolesdatagrid = new System.Windows.Forms.DataGridView();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,25 +84,25 @@ namespace car_dealership
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.addbt);
             this.panel2.Controls.Add(this.rolesdatagrid);
             this.panel2.Location = new System.Drawing.Point(42, 158);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(733, 282);
             this.panel2.TabIndex = 0;
             // 
-            // button2
+            // addbt
             // 
-            this.button2.BackColor = System.Drawing.Color.PowderBlue;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(40, 18);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 33);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Добавить";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.addbt.BackColor = System.Drawing.Color.PowderBlue;
+            this.addbt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addbt.ForeColor = System.Drawing.Color.Black;
+            this.addbt.Location = new System.Drawing.Point(40, 18);
+            this.addbt.Name = "addbt";
+            this.addbt.Size = new System.Drawing.Size(87, 33);
+            this.addbt.TabIndex = 1;
+            this.addbt.Text = "Добавить";
+            this.addbt.UseVisualStyleBackColor = false;
+            this.addbt.Click += new System.EventHandler(this.button2_Click);
             // 
             // rolesdatagrid
             // 
@@ -208,7 +208,7 @@ namespace car_dealership
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button addbt;
         private System.Windows.Forms.DataGridView rolesdatagrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
