@@ -107,6 +107,12 @@
     <Compile Include="add_role.Designer.cs">
       <DependentUpon>add_role.cs</DependentUpon>
     </Compile>
+    <Compile Include="add_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_user.Designer.cs">
+      <DependentUpon>add_user.cs</DependentUpon>
+    </Compile>
     <Compile Include="admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,7 @@
     <Compile Include="roles_table.Designer.cs">
       <DependentUpon>roles_table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Useridu.cs" />
     <Compile Include="user_table.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +188,9 @@
     </Compile>
     <EmbeddedResource Include="add_role.resx">
       <DependentUpon>add_role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_user.resx">
+      <DependentUpon>add_user.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.cs</DependentUpon>

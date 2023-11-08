@@ -101,6 +101,71 @@ namespace car_dealership
             }
             con.Close();
         }
+        public static void InsertUser(Useridu usr)
+        {
+            string sql4 = "INSERT INTO users VALUES (NULL,@last_name,@name,@patronymic,@adress,@mobile_phone,@password,@id_roles)";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmddu = new MySqlCommand(sql4, con);
+            cmddu.Parameters.Add("@last_name", MySqlDbType.VarChar).Value = usr.Last_Name;
+            cmddu.Parameters.Add("@name", MySqlDbType.VarChar).Value = usr.Name;
+            cmddu.Parameters.Add("@patronymic", MySqlDbType.VarChar).Value = usr.Patronymic;
+            cmddu.Parameters.Add("@adress", MySqlDbType.VarChar).Value = usr.Adress;
+            cmddu.Parameters.Add("@mobile_phone", MySqlDbType.VarChar).Value = usr.Mobile_Phone;
+            cmddu.Parameters.Add("@password", MySqlDbType.VarChar).Value = BCrypt.Net.BCrypt.HashPassword(usr.Password);
+            cmddu.Parameters.Add("@id_roles", MySqlDbType.VarChar).Value = usr.Id_Roles;
+            try
+            {
+                cmddu.ExecuteNonQuery();
+                MessageBox.Show("Добавление успешно!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Запись не добавлена.\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            con.Close();
+        }
+        public static void UpdateUser(Useridu usr, string id)
+        {
+            string sqlu = "UPDATE users SET last_name=@last_name,name=@name,patronymic=@patronymic,adress=@adress,mobile_phone=@mobile_phone,id_roles=@id_roles WHERE id=@UserID";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmdduu = new MySqlCommand(sqlu, con);
+            cmdduu.Parameters.Add("@last_name", MySqlDbType.VarChar).Value = usr.Last_Name;
+            cmdduu.Parameters.Add("@name", MySqlDbType.VarChar).Value = usr.Name;
+            cmdduu.Parameters.Add("@patronymic", MySqlDbType.VarChar).Value = usr.Patronymic;
+            cmdduu.Parameters.Add("@adress", MySqlDbType.VarChar).Value = usr.Adress;
+            cmdduu.Parameters.Add("@mobile_phone", MySqlDbType.VarChar).Value = usr.Mobile_Phone;
+            cmdduu.Parameters.Add("@id_roles", MySqlDbType.VarChar).Value = usr.Id_Roles;
+            cmdduu.Parameters.Add("@UserID", MySqlDbType.VarChar).Value = id;
+            try
+            {
+                cmdduu.ExecuteNonQuery();
+                MessageBox.Show("Обновление успешно!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Запись не обновлена.\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            con.Close();
+
+        }
+        public static void DeleteUser(string id)
+        {
+            string sqlld = "DELETE FROM autocar.users WHERE ID=@UserID";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmdd = new MySqlCommand(sqlld, con);
+            cmdd.CommandType = CommandType.Text;
+            cmdd.Parameters.Add("@UserID", MySqlDbType.VarChar).Value = id;
+            try
+            {
+                cmdd.ExecuteNonQuery();
+                MessageBox.Show("Удаление успешно!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Запись не удалена.\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            con.Close();
+        }
 
     }
 }
