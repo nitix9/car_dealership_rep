@@ -47,7 +47,7 @@ namespace car_dealership
                 int number = cmd2.ExecuteNonQuery();
                 if (number != 0) { MessageBox.Show("Регистрация успешна", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    Form1 frm_autor = new Form1();
+                    roles_table frm_autor = new roles_table();
                     frm_autor.Show();
                 }
                 else 
@@ -62,7 +62,7 @@ namespace car_dealership
         private void back_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 frm_autor = new Form1();
+            roles_table frm_autor = new roles_table();
             frm_autor.Show(); ;
         }
 

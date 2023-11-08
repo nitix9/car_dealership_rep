@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 
 namespace car_dealership
 {
-    public partial class Form1 : Form
+    public partial class roles_table : Form
     {
-        public Form1()
+        public roles_table()
         {
             InitializeComponent();
         }
@@ -92,6 +92,11 @@ namespace car_dealership
             {
                 MessageBox.Show("Выберите роль!","Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        internal void Display()
+        {
+            throw new NotImplementedException();
         }
 
         private void Form1_Load(object sender, EventArgs e)

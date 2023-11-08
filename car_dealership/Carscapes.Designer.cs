@@ -1,7 +1,7 @@
 ﻿
 namespace car_dealership
 {
-    partial class Form1
+    partial class roles_table
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -29,7 +29,7 @@ namespace car_dealership
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(roles_table));
             this.log_box = new System.Windows.Forms.TextBox();
             this.pas_box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -170,7 +170,7 @@ namespace car_dealership
             this.reg.Text = "Зарегистрироваться";
             this.reg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registration_LinkClicked);
             // 
-            // Form1
+            // roles_table
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -188,9 +188,9 @@ namespace car_dealership
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pas_box);
             this.Controls.Add(this.log_box);
-            this.Name = "Form1";
+            this.Name = "roles_table";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Carscapes";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hidepas)).EndInit();
