@@ -69,6 +69,7 @@
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
     </Reference>
@@ -101,6 +102,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addtype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addtype.Designer.cs">
+      <DependentUpon>addtype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_car.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_car.Designer.cs">
+      <DependentUpon>add_car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_hist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_hist.Designer.cs">
+      <DependentUpon>add_hist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_photo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_photo.Designer.cs">
+      <DependentUpon>add_photo.cs</DependentUpon>
+    </Compile>
     <Compile Include="add_role.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +145,7 @@
       <DependentUpon>admin.cs</DependentUpon>
     </Compile>
     <Compile Include="adminshow.cs" />
+    <Compile Include="Caridu.cs" />
     <Compile Include="carstore.cs" />
     <Compile Include="conn.cs" />
     <Compile Include="Carscapes.cs">
@@ -128,12 +154,21 @@
     <Compile Include="Carscapes.Designer.cs">
       <DependentUpon>Carscapes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Histidu.cs" />
+    <Compile Include="Photoidu.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="roles_table.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="roles_table.Designer.cs">
       <DependentUpon>roles_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Typeidu.cs" />
+    <Compile Include="type_auto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="type_auto.Designer.cs">
+      <DependentUpon>type_auto.cs</DependentUpon>
     </Compile>
     <Compile Include="Useridu.cs" />
     <Compile Include="user_table.cs">
@@ -160,12 +195,6 @@
     <Compile Include="history_sales_table.Designer.cs">
       <DependentUpon>history_sales_table.cs</DependentUpon>
     </Compile>
-    <Compile Include="car_types_table.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="car_types_table.Designer.cs">
-      <DependentUpon>car_types_table.cs</DependentUpon>
-    </Compile>
     <Compile Include="info.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +215,18 @@
     <Compile Include="user.Designer.cs">
       <DependentUpon>user.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addtype.resx">
+      <DependentUpon>addtype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_car.resx">
+      <DependentUpon>add_car.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_hist.resx">
+      <DependentUpon>add_hist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_photo.resx">
+      <DependentUpon>add_photo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="add_role.resx">
       <DependentUpon>add_role.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +242,9 @@
     <EmbeddedResource Include="roles_table.resx">
       <DependentUpon>roles_table.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="type_auto.resx">
+      <DependentUpon>type_auto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="user_table.resx">
       <DependentUpon>user_table.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,9 +256,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="history_sales_table.resx">
       <DependentUpon>history_sales_table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="car_types_table.resx">
-      <DependentUpon>car_types_table.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="info.resx">
       <DependentUpon>info.cs</DependentUpon>

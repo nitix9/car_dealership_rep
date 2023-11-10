@@ -23,10 +23,5 @@ namespace car_dealership
             admin frm_admin = new admin();
             frm_admin.Show();
         }
-
-        private void type_auto_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }

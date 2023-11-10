@@ -34,7 +34,8 @@ namespace car_dealership
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(713, 12);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(713, 415);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -50,9 +51,7 @@ namespace car_dealership
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Name = "type_auto";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "car types";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.type_auto_FormClosed);
+            this.Text = "type_auto";
             this.ResumeLayout(false);
 
         }

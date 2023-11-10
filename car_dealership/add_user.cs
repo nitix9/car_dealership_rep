@@ -43,7 +43,10 @@ namespace car_dealership
             adresstxt.Text = adress;
             phonetxt.Text = mobile_phone;
             pastxt.Text = password;
+            pastxt.Visible = true;
+            label5.Visible = true;
             irtxt.Text = id_roles;
+            Clear();
         }
         public void Clear()
         {
