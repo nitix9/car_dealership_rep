@@ -12,31 +12,48 @@ namespace car_dealership
 {
     public partial class add_type : Form
     {
-       /* private readonly type_auto _parent;
-        public string id, name_type;*/
-        public add_type()//type_auto parent
+        private readonly type_auto _parent;
+        public string id, name_types;
+        public add_type(type_auto parent)
         {
             InitializeComponent();
-            //_parent = parent;
+            _parent = parent;
         }
-        /*
         public void UpdateInfo()
         {
             typelbl.Text = "Обновить тип";
             add_tp.Text = "Обновить";
-            nmtptxt.Text = name_type;
+            nmtptxt.Text = name_types;
         }
 
         public void SaveInfo()
         {
             typelbl.Text = "Добавить тип";
             add_tp.Text = "Сохранить";
-            nmtptxt.Text = name_type;
+            nmtptxt.Text = name_types;
             Clear();
         }
+
         public void Clear()
         {
             nmtptxt.Text = string.Empty;
-        }*/
+        }
+        private void add_tp_Click(object sender, EventArgs e)
+        {
+            if (add_tp.Text == "Сохранить")
+            {
+                Typeidu tp = new Typeidu(nmtptxt.Text.Trim());
+                conn.InsertType(tp);
+                Clear();
+            }
+            if (add_tp.Text == "Обновить")
+            {
+                Typeidu tp = new Typeidu(nmtptxt.Text.Trim());
+                conn.UpdateType(tp, id);
+                Clear();
+            }
+            _parent.Display();
+        }
+
     }
 }

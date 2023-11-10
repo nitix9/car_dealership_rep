@@ -21,7 +21,7 @@ namespace car_dealership
         }
         public void UpdateInfo()
         {
-            lblacar.Text = "Обновить машину";
+            lblacar.Text = "Обновить автомобиль";
             add_cars.Text = "Обновить";
             numbertxt.Text = number;
             brandtxt.Text = brand;
@@ -33,7 +33,7 @@ namespace car_dealership
         }
         public void SaveInfo()
         {
-            lblacar.Text = "Добавить машину";
+            lblacar.Text = "Добавить автомобиль";
             add_cars.Text = "Сохранить";
             numbertxt.Text = number;
             brandtxt.Text = brand;

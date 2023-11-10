@@ -85,6 +85,7 @@ namespace car_dealership
             this.add_tp.TabIndex = 36;
             this.add_tp.Text = "Сохранить";
             this.add_tp.UseVisualStyleBackColor = false;
+            this.add_tp.Click += new System.EventHandler(this.add_tp_Click);
             // 
             // add_type
             // 
