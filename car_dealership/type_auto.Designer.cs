@@ -29,18 +29,18 @@ namespace car_dealership
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.type_datagrid = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.с1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Columnbt1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Columnbt2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.type_datagrid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -113,6 +113,53 @@ namespace car_dealership
             this.type_datagrid.TabIndex = 0;
             this.type_datagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.type_datagrid_CellClick);
             // 
+            // с1
+            // 
+            this.с1.DataPropertyName = "id";
+            this.с1.HeaderText = "#";
+            this.с1.Name = "с1";
+            this.с1.ReadOnly = true;
+            this.с1.Visible = false;
+            // 
+            // c2
+            // 
+            this.c2.DataPropertyName = "name_types";
+            this.c2.HeaderText = "Наименование типа";
+            this.c2.Name = "c2";
+            this.c2.ReadOnly = true;
+            // 
+            // Columnbt1
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.Columnbt1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Columnbt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Columnbt1.HeaderText = "";
+            this.Columnbt1.Name = "Columnbt1";
+            this.Columnbt1.ReadOnly = true;
+            this.Columnbt1.Text = "Изменить";
+            this.Columnbt1.UseColumnTextForButtonValue = true;
+            // 
+            // Columnbt2
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.Columnbt2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Columnbt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Columnbt2.HeaderText = "";
+            this.Columnbt2.Name = "Columnbt2";
+            this.Columnbt2.ReadOnly = true;
+            this.Columnbt2.Text = "Удалить";
+            this.Columnbt2.UseColumnTextForButtonValue = true;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PowderBlue;
@@ -135,53 +182,6 @@ namespace car_dealership
             this.label1.TabIndex = 3;
             this.label1.Text = "Типы автомобилей";
             // 
-            // с1
-            // 
-            this.с1.DataPropertyName = "id";
-            this.с1.HeaderText = "#";
-            this.с1.Name = "с1";
-            this.с1.ReadOnly = true;
-            this.с1.Visible = false;
-            // 
-            // c2
-            // 
-            this.c2.DataPropertyName = "name_types";
-            this.c2.HeaderText = "Наименование типа";
-            this.c2.Name = "c2";
-            this.c2.ReadOnly = true;
-            // 
-            // Columnbt1
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.Columnbt1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Columnbt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Columnbt1.HeaderText = "";
-            this.Columnbt1.Name = "Columnbt1";
-            this.Columnbt1.ReadOnly = true;
-            this.Columnbt1.Text = "Изменить";
-            this.Columnbt1.UseColumnTextForButtonValue = true;
-            // 
-            // Columnbt2
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.Columnbt2.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Columnbt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Columnbt2.HeaderText = "";
-            this.Columnbt2.Name = "Columnbt2";
-            this.Columnbt2.ReadOnly = true;
-            this.Columnbt2.Text = "Удалить";
-            this.Columnbt2.UseColumnTextForButtonValue = true;
-            // 
             // type_auto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +191,7 @@ namespace car_dealership
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "type_auto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "type_auto";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.type_auto_FormClosed);
             this.Shown += new System.EventHandler(this.type_auto_Shown);
