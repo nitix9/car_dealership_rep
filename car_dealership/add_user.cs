@@ -22,7 +22,7 @@ namespace car_dealership
         }
         public void UpdateInfo()
         {
-            label2.Text = "Обновить роль";
+            label2.Text = "Обновить пользователя";
             add_userrs.Text = "Обновить";
             last_nametxt.Text = last_name;
             nametxt.Text = name;
@@ -35,7 +35,7 @@ namespace car_dealership
         }
         public void SaveInfo()
         {
-            label2.Text = "Добавить роль";
+            label2.Text = "Добавить пользователя";
             add_userrs.Text = "Сохранить";
             last_nametxt.Text = last_name;
             nametxt.Text = name;

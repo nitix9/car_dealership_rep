@@ -364,7 +364,7 @@ namespace car_dealership
         }
         public static void UpdateType(Typeidu tp, string id)
         {
-            string sqltu = "UPDATE types_car SET name=@name_types WHERE id=@TypeID";
+            string sqltu = "UPDATE types_car SET name_types=@name_types WHERE id=@TypeID";
             MySqlConnection con = GetConnection();
             MySqlCommand cmdtu = new MySqlCommand(sqltu, con);
             cmdtu.Parameters.Add("@name_types", MySqlDbType.VarChar).Value = tp.Name_types;
@@ -383,7 +383,7 @@ namespace car_dealership
         }
         public static void DeleteType(string id)
         {
-            string sqltd = "DELETE FROM  WHERE ID=@TypeID";
+            string sqltd = "DELETE FROM types_car WHERE ID=@TypeID";
             MySqlConnection con = GetConnection();
             MySqlCommand cmdtd = new MySqlCommand(sqltd, con);
             cmdtd.CommandType = CommandType.Text;

@@ -162,9 +162,9 @@ namespace car_dealership
             this.lblacar.ForeColor = System.Drawing.Color.Black;
             this.lblacar.Location = new System.Drawing.Point(12, 41);
             this.lblacar.Name = "lblacar";
-            this.lblacar.Size = new System.Drawing.Size(125, 17);
+            this.lblacar.Size = new System.Drawing.Size(152, 17);
             this.lblacar.TabIndex = 3;
-            this.lblacar.Text = "Добавить машину";
+            this.lblacar.Text = "Добавить автомобиль";
             // 
             // add_cars
             // 
