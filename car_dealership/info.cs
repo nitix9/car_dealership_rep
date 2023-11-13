@@ -20,15 +20,14 @@ namespace car_dealership
         private void info_Load(object sender, EventArgs e)
         {
             label1.Text = carstore.dt.Rows[carstore.index][1].ToString();
+            label2.Text = carstore.dt.Rows[carstore.index][2].ToString();
+            label3.Text = carstore.dt.Rows[carstore.index][3].ToString();
+            label4.Text = carstore.dt.Rows[carstore.index][4].ToString();
+            label5.Text = carstore.dt.Rows[carstore.index][5].ToString();
+            label6.Text = carstore.dt.Rows[carstore.index][6].ToString();
+            
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void info_Shown(object sender, EventArgs e)
-        {
-        }
+        
     }
 }
