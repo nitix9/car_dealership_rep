@@ -32,6 +32,7 @@ namespace car_dealership
             label2.Text = "Добавить роль";
             add_roles.Text = "Сохранить";
             name_roles.Text = name;
+            Clear();
         }
         public void Clear()
         {

@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace car_dealership
 {
-    public partial class history_sale : Form
+    public partial class type_auto : Form
     {
-        add_hist formh;
-        public history_sale()
+        add_type formt;
+        public type_auto()
         {
             InitializeComponent();
-            formh = new add_hist(this);
+            formt = new add_type(this);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,45 +26,42 @@ namespace car_dealership
             frm_admin.Show();
         }
 
-        private void history_sale_FormClosed(object sender, FormClosedEventArgs e)
+        private void type_auto_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
         public void Display()
         {
-            conn.display("select id,id_users,id_car,date_sale,total_amount from sold_cars", history_datagrid);
+            conn.display("select id,name_types from types_car", type_datagrid);
         }
 
-        private void history_sale_Shown(object sender, EventArgs e)
+        private void type_auto_Shown(object sender, EventArgs e)
         {
             Display();
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            formh.Clear();
-            formh.SaveInfo();
-            formh.ShowDialog();
+            formt.Clear();
+            formt.SaveInfo();
+            formt.ShowDialog();
         }
 
-        private void history_datagrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void type_datagrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0)
             {
-                formh.Clear();
-                formh.id = history_datagrid.Rows[e.RowIndex].Cells[2].Value.ToString();
-                formh.id_users = history_datagrid.Rows[e.RowIndex].Cells[3].Value.ToString();
-                formh.id_car = history_datagrid.Rows[e.RowIndex].Cells[4].Value.ToString();
-                formh.date_sale = history_datagrid.Rows[e.RowIndex].Cells[5].Value.ToString();
-                formh.UpdateInfo();
-                formh.ShowDialog();
+                formt.Clear();
+                formt.id = type_datagrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+                formt.name_types = type_datagrid.Rows[e.RowIndex].Cells[3].Value.ToString();
+                formt.UpdateInfo();
+                formt.ShowDialog();
                 return;
             }
             if (e.ColumnIndex == 1)
             {
                 if (MessageBox.Show("Вы точно хотите удалить запись?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    conn.DeleteHistsl(history_datagrid.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    conn.DeleteType(type_datagrid.Rows[e.RowIndex].Cells[2].Value.ToString());
                     Display();
                 }
                 return;
