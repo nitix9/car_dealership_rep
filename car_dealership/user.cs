@@ -25,7 +25,8 @@ namespace car_dealership
 
         public void displayUser() 
         {
-            conn.display("select number,brand,model,year_release,id_types,cost,discription from cars", dataGridView1);
+            conn.display("SELECT cars.id,cars.number,cars.brand,cars.model,cars.year_release,types_car.name_types,cars.cost,cars.discription FROM autocar.cars " +
+                "JOIN autocar.types_car ON autocar.cars.id_types = autocar.types_car.id", dataGridView1);
         }
 
         private void user_Shown(object sender, EventArgs e)

@@ -293,5 +293,17 @@
   <ItemGroup>
     <None Include="Resources\1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="picture_car\BMV.jpg" />
+    <Content Include="picture_car\BMV2.jpg" />
+    <Content Include="picture_car\BMV3.jpeg" />
+    <Content Include="picture_car\bmvv.jpg" />
+    <Content Include="picture_car\lada.jpeg" />
+    <Content Include="picture_car\lada2.jpg" />
+    <Content Include="picture_car\lada3.jpeg" />
+    <Content Include="picture_car\mk1.jpg" />
+    <Content Include="picture_car\mk2.jpeg" />
+    <Content Include="picture_car\mk3.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
