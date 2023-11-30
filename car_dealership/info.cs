@@ -33,6 +33,11 @@ namespace car_dealership
             DataTable Tableway = new DataTable();
             adaptway.Fill(Tableway);
             pictureBox1.Image = Image.FromFile(Tableway.Rows[0][0].ToString());
+            string sqls = $"SELECT COUNT(*) FROM photo_car WHERE id_cars=" + carstore.dt.Rows[carstore.index][0].ToString() + "";
+            MySqlCommand cmds = new MySqlCommand(sqls, con);
+            int n = Convert.ToInt32(cmds.ExecuteScalar());
+            label14.Text = Convert.ToString("из  "+ n);
+            label13.Text = Convert.ToString(a+1); 
         }
         public int a = 0;
 
@@ -47,8 +52,10 @@ namespace car_dealership
             if (a == Tableway.Rows.Count)
             {
                 a = 0;
+                label13.Text = Convert.ToString(a + 3);
             }
             pictureBox1.Image = Image.FromFile(Tableway.Rows[a][0].ToString());
+            label13.Text = Convert.ToString(a+1);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -64,6 +71,7 @@ namespace car_dealership
                 a = Tableway.Rows.Count-1;
             }
             pictureBox1.Image = Image.FromFile(Tableway.Rows[a][0].ToString());
+            label13.Text = Convert.ToString(a+1);
         }
     }
 }
