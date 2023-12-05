@@ -32,7 +32,7 @@ namespace car_dealership
                     string log_verify = log_box.Text;
                     string pas_verify = pas_box.Text;
                     MySqlConnection con = conn.GetConnection();
-                    string sql = $"SELECT mobile_phone,password FROM users WHERE mobile_phone LIKE @mobile_phone AND id_roles=1";
+                    string sql = $"SELECT mobile_phone,password FROM users WHERE mobile_phone LIKE @mobile_phone AND id_roles=16";
                     MySqlDataAdapter adapter = new MySqlDataAdapter(sql, con);
                     DataTable TableUsers = new DataTable();
                     adapter.SelectCommand.Parameters.Add("@mobile_phone", MySqlDbType.VarChar).Value = log_verify;
@@ -62,7 +62,7 @@ namespace car_dealership
                 string log_verify = log_box.Text;
                 string pas_verify = pas_box.Text;
                 MySqlConnection con = conn.GetConnection();
-                string sql = $"SELECT mobile_phone,password FROM users WHERE mobile_phone LIKE @mobile_phone AND id_roles=2";
+                string sql = $"SELECT mobile_phone,password FROM users WHERE mobile_phone LIKE @mobile_phone AND id_roles=15";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, con);
                 DataTable TableUsers = new DataTable();
                 adapter.SelectCommand.Parameters.Add("@mobile_phone", MySqlDbType.VarChar).Value = log_verify;
