@@ -26,7 +26,8 @@ namespace car_dealership
 
         private void create_but_Click(object sender, EventArgs e)
         {
-           try {
+            try
+            {
                 string reg_last_name = lastt_name.Text;
                 string reg_name = namee.Text;
                 string reg_patronymic = patronymicc.Text;
@@ -36,7 +37,7 @@ namespace car_dealership
                 string pass = BCrypt.Net.BCrypt.HashPassword(reg_pas);
                 bool t1 = BCrypt.Net.BCrypt.Verify(reg_pas, pass);
                 MySqlConnection con = conn.GetConnection();
-                string sql = $"INSERT INTO users (last_name,name,patronymic,adress,mobile_phone,password,id_roles) VALUES (@last_name,@name,@patronymic,@adress,@mobile_phone,@password,1)";
+                string sql = $"INSERT INTO users (last_name,name,patronymic,adress,mobile_phone,password,id_roles) VALUES (@last_name,@name,@patronymic,@adress,@mobile_phone,@password,16)";
                 MySqlCommand cmd2 = new MySqlCommand(sql, con);
                 cmd2.Parameters.Add("@last_name", MySqlDbType.VarChar).Value = reg_last_name;
                 cmd2.Parameters.Add("@name", MySqlDbType.VarChar).Value = reg_name;
@@ -45,24 +46,26 @@ namespace car_dealership
                 cmd2.Parameters.Add("@mobile_phone", MySqlDbType.VarChar).Value = reg_phone;
                 cmd2.Parameters.Add("@password", MySqlDbType.VarChar).Value = pass;
                 int number = cmd2.ExecuteNonQuery();
-                if (number != 0) { MessageBox.Show("Регистрация успешна", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (number != 0)
+                {
+                    MessageBox.Show("Регистрация успешна", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    roles_table frm_autor = new roles_table();
+                    osnova frm_autor = new osnova();
                     frm_autor.Show();
                 }
-                else 
+                else
                 {
-                    MessageBox.Show("Заполните все поля", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Error); 
-                 }
+                    MessageBox.Show("Заполните все поля", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
             }
-            catch { }
+           catch { }
         }
 
         private void back_Click(object sender, EventArgs e)
         {
             this.Hide();
-            roles_table frm_autor = new roles_table();
+            osnova frm_autor = new osnova();
             frm_autor.Show(); ;
         }
 

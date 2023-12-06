@@ -31,6 +31,8 @@ namespace car_dealership
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(info));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@ namespace car_dealership
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -83,6 +83,26 @@ namespace car_dealership
             this.panel1.Size = new System.Drawing.Size(596, 561);
             this.panel1.TabIndex = 0;
             this.panel1.TabStop = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Location = new System.Drawing.Point(412, 368);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(60, 20);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "label14";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(395, 368);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(60, 20);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "label13";
             // 
             // pictureBox3
             // 
@@ -272,26 +292,6 @@ namespace car_dealership
             this.label1.Size = new System.Drawing.Size(83, 31);
             this.label1.TabIndex = 5;
             this.label1.Text = "label1";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(395, 368);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 20);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "label13";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(412, 368);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(60, 20);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "label14";
             // 
             // info
             // 
