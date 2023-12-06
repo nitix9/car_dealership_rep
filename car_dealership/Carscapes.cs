@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 
 namespace car_dealership
 {
-    public partial class roles_table : Form
+    public partial class osnova : Form
     {
-        public roles_table()
+        public osnova()
         {
             InitializeComponent();
         }

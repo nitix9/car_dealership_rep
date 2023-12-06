@@ -68,5 +68,12 @@ namespace car_dealership
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           osnova frmosnova = new osnova();
+            frmosnova.Show();
+            this.Hide();
+        }
     }
 }
