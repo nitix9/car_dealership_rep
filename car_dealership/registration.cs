@@ -50,7 +50,7 @@ namespace car_dealership
                 {
                     MessageBox.Show("Регистрация успешна", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    roles_table frm_autor = new roles_table();
+                    osnova frm_autor = new osnova();
                     frm_autor.Show();
                 }
                 else
@@ -65,7 +65,7 @@ namespace car_dealership
         private void back_Click(object sender, EventArgs e)
         {
             this.Hide();
-            roles_table frm_autor = new roles_table();
+            osnova frm_autor = new osnova();
             frm_autor.Show(); ;
         }
 
