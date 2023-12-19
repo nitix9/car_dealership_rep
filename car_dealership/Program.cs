@@ -16,7 +16,7 @@ namespace car_dealership
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new admin());
+            Application.Run(new user());
         }
     }
 }
