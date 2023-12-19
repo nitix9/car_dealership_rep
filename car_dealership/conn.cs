@@ -399,7 +399,5 @@ namespace car_dealership
             }
             con.Close();
         }
-
-
     }
 }
