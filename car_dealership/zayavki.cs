@@ -13,9 +13,11 @@ namespace car_dealership
 {
     public partial class zayavki : Form
     {
-        public zayavki()
+        private readonly user _parent;
+        public zayavki(user parent)
         {
             InitializeComponent();
+            _parent = parent;
         }
 
         private void send_Click(object sender, EventArgs e)
@@ -41,6 +43,19 @@ namespace car_dealership
             }
             catch { MessageBox.Show(sqlz); }
             con.Close();
+            MySqlConnection conup = conn.GetConnection();
+            string sqlupde = $"UPDATE cars SET sold=1 WHERE cars.id =" + carstore.dt.Rows[carstore.index][0].ToString() + "";
+            MessageBox.Show(sqlupde);
+
+            MySqlCommand cmdupds = new MySqlCommand(sqlupde, conup);
+            try
+            {
+                cmdupds.ExecuteNonQuery();
+            }
+            catch { }
+            conup.Close();
+            this.Hide();
+            _parent.displayUser();
         }
     }
 }

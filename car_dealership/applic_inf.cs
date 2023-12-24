@@ -25,6 +25,17 @@ namespace car_dealership
         {
             if (MessageBox.Show("Вы точно хотите отклонить заявку?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
             {
+                MySqlConnection condd = conn.GetConnection();
+                string sqlupddd = $"UPDATE cars SET sold=0 WHERE cars.id =" + carstore.dt.Rows[carstore.index][1].ToString();
+                MySqlCommand cmdupddd = new MySqlCommand(sqlupddd, condd);
+                try
+                {
+                    cmdupddd.ExecuteNonQuery();
+                    this.Hide();
+                }
+                catch { }
+                condd.Close();
+
                 string sqlldapl = "DELETE FROM autocar.applications WHERE idapplications="+carstore.dt.Rows[carstore.index][0].ToString()+"";
                 MySqlConnection con = conn.GetConnection();
                 MySqlCommand cmdtd = new MySqlCommand(sqlldapl, con);
@@ -32,11 +43,11 @@ namespace car_dealership
                 try
                 {
                     cmdtd.ExecuteNonQuery();
-                    MessageBox.Show("Заявка откланена!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(carstore.dt.Rows[carstore.index][1].ToString()+"Заявка откланена!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show(sqlldapl + "Заявка не отклонена.\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Заявка не отклонена.\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 con.Close();
             }
@@ -66,7 +77,7 @@ namespace car_dealership
         private void accept_but_Click(object sender, EventArgs e)
         {
             MySqlConnection con = conn.GetConnection();
-            string sqlupd = $"UPDATE cars SET sold=0 WHERE cars.id =" + carstore.dt.Rows[carstore.index][1].ToString() + "";
+            string sqlupd = $"UPDATE cars SET sold=1 WHERE cars.id =" + carstore.dt.Rows[carstore.index][1].ToString() + "";
 
             MySqlCommand cmdupd = new MySqlCommand(sqlupd, con);
             try
