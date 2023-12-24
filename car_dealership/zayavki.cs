@@ -20,7 +20,7 @@ namespace car_dealership
 
         private void send_Click(object sender, EventArgs e)
         {
-            string sqlz = "INSERT INTO applications SELECT NULL," + carstore.dt.Rows[carstore.index][0].ToString() + ",id FROM users WHERE mobile_phone = @number and users.name = @name and users.last_name = @last_name and users.patronymic = @patronymic";
+            string sqlz = "INSERT INTO applications SELECT NULL," + carstore.dt.Rows[carstore.index][0].ToString() + ",id,NULL FROM users WHERE mobile_phone = @number and users.name = @name and users.last_name = @last_name and users.patronymic = @patronymic";
             MySqlConnection con = conn.GetConnection();
             MySqlCommand cmdt = new MySqlCommand(sqlz, con);
             cmdt.Parameters.Add("@number", MySqlDbType.VarChar).Value = numbertxt.Text;
@@ -39,7 +39,7 @@ namespace car_dealership
                         MessageBox.Show("Неверные данные, заявка не отправлена!","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch { }
+            catch { MessageBox.Show(sqlz); }
             con.Close();
         }
     }

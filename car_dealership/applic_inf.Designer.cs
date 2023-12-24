@@ -110,6 +110,7 @@ namespace car_dealership
             this.accept_but.TabIndex = 5;
             this.accept_but.Text = "Принять";
             this.accept_but.UseVisualStyleBackColor = false;
+            this.accept_but.Click += new System.EventHandler(this.accept_but_Click);
             // 
             // last_name
             // 
