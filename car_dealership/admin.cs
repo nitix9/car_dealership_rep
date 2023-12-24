@@ -75,5 +75,12 @@ namespace car_dealership
         {
             Application.Exit();
         }
+
+        private void zayavki_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            zayavki_table frm_zayavtable = new zayavki_table();
+            frm_zayavtable.Show();
+        }
     }
 }
