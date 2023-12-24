@@ -32,11 +32,11 @@ namespace car_dealership
                 try
                 {
                     cmdtd.ExecuteNonQuery();
-                    MessageBox.Show("Удаление успешно!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Заявка откланена!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show(sqlldapl + "Запись не удалена.\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(sqlldapl + "Заявка не отклонена.\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 con.Close();
             }
@@ -61,6 +61,48 @@ namespace car_dealership
             adaptercar.Fill(Tableapplcar);
             car_name.Text = Tableapplcar.Rows[0]["brand"].ToString()+" "+ Tableapplcar.Rows[0]["model"].ToString();
             sum.Text = Tableapplcar.Rows[0]["cost"].ToString();
+        }
+
+        private void accept_but_Click(object sender, EventArgs e)
+        {
+            MySqlConnection con = conn.GetConnection();
+            string sqlupd = $"UPDATE cars SET sold=0 WHERE cars.id =" + carstore.dt.Rows[carstore.index][1].ToString() + "";
+
+            MySqlCommand cmdupd = new MySqlCommand(sqlupd, con);
+            try
+            {
+                cmdupd.ExecuteNonQuery();
+                MessageBox.Show("Заявка принята!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Возникла ошибка при принятии заявки.\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            con.Close();
+
+            string sqlins = "INSERT INTO sold_cars VALUES (NULL,"+carstore.dt.Rows[carstore.index][2].ToString()+","+carstore.dt.Rows[carstore.index][1].ToString()+",NULL,NULL)";
+            MySqlConnection conins = conn.GetConnection();
+            MySqlCommand cmdd1 = new MySqlCommand(sqlins, conins);
+            try
+            {
+                cmdd1.ExecuteNonQuery();
+            }
+            catch{}
+            con.Close();
+
+            string sqlldapldel = "DELETE FROM autocar.applications WHERE idapplications=" + carstore.dt.Rows[carstore.index][0].ToString() + "";
+            MySqlConnection condel = conn.GetConnection();
+            MySqlCommand cmdtdel = new MySqlCommand(sqlldapldel, condel);
+            cmdtdel.CommandType = CommandType.Text;
+            try
+            {
+                cmdtdel.ExecuteNonQuery();
+            }
+            catch{}
+            con.Close();
+            _parent.Display();
         }
     }
 }
