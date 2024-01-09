@@ -40,7 +40,7 @@ namespace car_dealership
             this.name = new System.Windows.Forms.Label();
             this.patronymic = new System.Windows.Forms.Label();
             this.car_name = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.but_cancel = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.sum = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -152,17 +152,17 @@ namespace car_dealership
             this.car_name.TabIndex = 9;
             this.car_name.Text = "name_car";
             // 
-            // button1
+            // but_cancel
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(31, 410);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 28);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Отклонить";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.but_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.but_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but_cancel.Location = new System.Drawing.Point(31, 410);
+            this.but_cancel.Name = "but_cancel";
+            this.but_cancel.Size = new System.Drawing.Size(136, 28);
+            this.but_cancel.TabIndex = 10;
+            this.but_cancel.Text = "Отклонить";
+            this.but_cancel.UseVisualStyleBackColor = false;
+            this.but_cancel.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox2
             // 
@@ -225,7 +225,7 @@ namespace car_dealership
             this.Controls.Add(this.label7);
             this.Controls.Add(this.sum);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.but_cancel);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.car_name);
             this.Controls.Add(this.patronymic);
@@ -261,7 +261,7 @@ namespace car_dealership
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Label patronymic;
         private System.Windows.Forms.Label car_name;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button but_cancel;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label sum;
         private System.Windows.Forms.Label label6;
