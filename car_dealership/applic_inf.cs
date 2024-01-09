@@ -43,7 +43,7 @@ namespace car_dealership
                 try
                 {
                     cmdtd.ExecuteNonQuery();
-                    MessageBox.Show("Заявка откланена!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Заявка отклонена!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (MySqlException ex)
                 {

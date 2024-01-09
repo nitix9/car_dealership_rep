@@ -162,7 +162,7 @@ namespace car_dealership
             this.but_cancel.TabIndex = 10;
             this.but_cancel.Text = "Отклонить";
             this.but_cancel.UseVisualStyleBackColor = false;
-            this.but_cancel.Click += new System.EventHandler(this.button1_Click);
+            this.but_cancel.Click += new System.EventHandler(this.but_cancel_Click) ;
             // 
             // pictureBox2
             // 
