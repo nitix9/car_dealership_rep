@@ -21,7 +21,7 @@ namespace car_dealership
             _parent = parent;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void but_cancel_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Вы точно хотите отклонить заявку?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
             {
