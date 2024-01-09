@@ -41,11 +41,10 @@ namespace car_dealership
                         MessageBox.Show("Неверные данные, заявка не отправлена!","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch { MessageBox.Show(sqlz); }
+            catch { }
             con.Close();
             MySqlConnection conup = conn.GetConnection();
             string sqlupde = $"UPDATE cars SET sold=1 WHERE cars.id =" + carstore.dt.Rows[carstore.index][0].ToString() + "";
-            MessageBox.Show(sqlupde);
 
             MySqlCommand cmdupds = new MySqlCommand(sqlupde, conup);
             try
