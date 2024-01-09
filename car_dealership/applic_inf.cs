@@ -43,7 +43,7 @@ namespace car_dealership
                 try
                 {
                     cmdtd.ExecuteNonQuery();
-                    MessageBox.Show(carstore.dt.Rows[carstore.index][1].ToString()+"Заявка откланена!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Заявка откланена!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (MySqlException ex)
                 {
