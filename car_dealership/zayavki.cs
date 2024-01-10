@@ -13,14 +13,16 @@ namespace car_dealership
 {
     public partial class zayavki : Form
     {
-        public zayavki()
+        private readonly user _parent;
+        public zayavki(user parent)
         {
             InitializeComponent();
+            _parent = parent;
         }
 
         private void send_Click(object sender, EventArgs e)
         {
-            string sqlz = "INSERT INTO applications SELECT NULL," + carstore.dt.Rows[carstore.index][0].ToString() + ",id FROM users WHERE mobile_phone = @number and users.name = @name and users.last_name = @last_name and users.patronymic = @patronymic";
+            string sqlz = "INSERT INTO applications SELECT NULL," + carstore.dt.Rows[carstore.index][0].ToString() + ",id,NULL FROM users WHERE mobile_phone = @number and users.name = @name and users.last_name = @last_name and users.patronymic = @patronymic";
             MySqlConnection con = conn.GetConnection();
             MySqlCommand cmdt = new MySqlCommand(sqlz, con);
             cmdt.Parameters.Add("@number", MySqlDbType.VarChar).Value = numbertxt.Text;
@@ -41,6 +43,18 @@ namespace car_dealership
             }
             catch { }
             con.Close();
+            MySqlConnection conup = conn.GetConnection();
+            string sqlupde = $"UPDATE cars SET sold=1 WHERE cars.id =" + carstore.dt.Rows[carstore.index][0].ToString() + "";
+
+            MySqlCommand cmdupds = new MySqlCommand(sqlupde, conup);
+            try
+            {
+                cmdupds.ExecuteNonQuery();
+            }
+            catch { }
+            conup.Close();
+            this.Hide();
+            _parent.displayUser();
         }
     }
 }

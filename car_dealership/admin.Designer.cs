@@ -38,6 +38,7 @@ namespace car_dealership
             this.roles_frm = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.zayavki_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // user_frm
@@ -45,7 +46,7 @@ namespace car_dealership
             this.user_frm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.user_frm.BackColor = System.Drawing.Color.White;
             this.user_frm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.user_frm.Location = new System.Drawing.Point(264, 164);
+            this.user_frm.Location = new System.Drawing.Point(264, 144);
             this.user_frm.Name = "user_frm";
             this.user_frm.Size = new System.Drawing.Size(268, 33);
             this.user_frm.TabIndex = 0;
@@ -58,7 +59,7 @@ namespace car_dealership
             this.auto_frm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.auto_frm.BackColor = System.Drawing.Color.White;
             this.auto_frm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.auto_frm.Location = new System.Drawing.Point(264, 203);
+            this.auto_frm.Location = new System.Drawing.Point(264, 183);
             this.auto_frm.Name = "auto_frm";
             this.auto_frm.Size = new System.Drawing.Size(268, 33);
             this.auto_frm.TabIndex = 1;
@@ -71,7 +72,7 @@ namespace car_dealership
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.BackColor = System.Drawing.Color.White;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(264, 320);
+            this.button3.Location = new System.Drawing.Point(264, 300);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(268, 33);
             this.button3.TabIndex = 2;
@@ -84,7 +85,7 @@ namespace car_dealership
             this.hist_sale_frm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.hist_sale_frm.BackColor = System.Drawing.Color.White;
             this.hist_sale_frm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hist_sale_frm.Location = new System.Drawing.Point(264, 281);
+            this.hist_sale_frm.Location = new System.Drawing.Point(264, 261);
             this.hist_sale_frm.Name = "hist_sale_frm";
             this.hist_sale_frm.Size = new System.Drawing.Size(268, 33);
             this.hist_sale_frm.TabIndex = 3;
@@ -97,7 +98,7 @@ namespace car_dealership
             this.photo_au_frm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.photo_au_frm.BackColor = System.Drawing.Color.White;
             this.photo_au_frm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.photo_au_frm.Location = new System.Drawing.Point(264, 242);
+            this.photo_au_frm.Location = new System.Drawing.Point(264, 222);
             this.photo_au_frm.Name = "photo_au_frm";
             this.photo_au_frm.Size = new System.Drawing.Size(268, 33);
             this.photo_au_frm.TabIndex = 4;
@@ -110,9 +111,9 @@ namespace car_dealership
             this.roles_frm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.roles_frm.BackColor = System.Drawing.Color.White;
             this.roles_frm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roles_frm.Location = new System.Drawing.Point(264, 125);
+            this.roles_frm.Location = new System.Drawing.Point(264, 105);
             this.roles_frm.Name = "roles_frm";
-            this.roles_frm.Size = new System.Drawing.Size(269, 33);
+            this.roles_frm.Size = new System.Drawing.Size(268, 33);
             this.roles_frm.TabIndex = 5;
             this.roles_frm.Text = "Перейти к таблице роли";
             this.roles_frm.UseVisualStyleBackColor = false;
@@ -142,6 +143,19 @@ namespace car_dealership
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // zayavki_button
+            // 
+            this.zayavki_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.zayavki_button.BackColor = System.Drawing.Color.White;
+            this.zayavki_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.zayavki_button.Location = new System.Drawing.Point(264, 340);
+            this.zayavki_button.Name = "zayavki_button";
+            this.zayavki_button.Size = new System.Drawing.Size(268, 33);
+            this.zayavki_button.TabIndex = 8;
+            this.zayavki_button.Text = "Перейти к заявкам";
+            this.zayavki_button.UseVisualStyleBackColor = false;
+            this.zayavki_button.Click += new System.EventHandler(this.zayavki_button_Click);
+            // 
             // admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,6 +164,7 @@ namespace car_dealership
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.zayavki_button);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.roles_frm);
@@ -177,5 +192,6 @@ namespace car_dealership
         private System.Windows.Forms.Button roles_frm;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button zayavki_button;
     }
 }

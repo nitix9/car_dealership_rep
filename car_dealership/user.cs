@@ -13,9 +13,11 @@ namespace car_dealership
 {
     public partial class user : Form
     {
+        zayavki formz;
         public user()
         {
             InitializeComponent();
+            formz = new zayavki(this);
         }
 
         private void user_FormClosed(object sender, FormClosedEventArgs e)
@@ -26,11 +28,12 @@ namespace car_dealership
         public void displayUser()
         {
             conn.display("SELECT cars.id,cars.number,cars.brand,cars.model,cars.year_release,types_car.name_types,cars.cost,cars.discription FROM autocar.cars " +
-                "JOIN autocar.types_car ON autocar.cars.id_types = autocar.types_car.id", dataGridView1);
+                "JOIN autocar.types_car ON autocar.cars.id_types = autocar.types_car.id WHERE sold=0", dataGridView1);
         }
 
         private void user_Shown(object sender, EventArgs e)
         {
+
             displayUser();
             foreach (DataGridViewColumn column in dataGridView1.Columns)
             {
@@ -48,7 +51,8 @@ namespace car_dealership
         {
             if (e.ColumnIndex == 1)
             {
-                zayavki zvkfrm = new zayavki();
+                carstore.index = e.RowIndex;
+                zayavki zvkfrm = new zayavki(this);
                 zvkfrm.Show();
             }
             if (e.ColumnIndex == 0)

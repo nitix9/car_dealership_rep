@@ -145,6 +145,12 @@
       <DependentUpon>admin.cs</DependentUpon>
     </Compile>
     <Compile Include="adminshow.cs" />
+    <Compile Include="applic_inf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="applic_inf.Designer.cs">
+      <DependentUpon>applic_inf.cs</DependentUpon>
+    </Compile>
     <Compile Include="Caridu.cs" />
     <Compile Include="carstore.cs" />
     <Compile Include="conn.cs" />
@@ -221,6 +227,12 @@
     <Compile Include="zayavki.Designer.cs">
       <DependentUpon>zayavki.cs</DependentUpon>
     </Compile>
+    <Compile Include="zayavki_table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zayavki_table.Designer.cs">
+      <DependentUpon>zayavki_table.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="addtype.resx">
       <DependentUpon>addtype.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="applic_inf.resx">
+      <DependentUpon>applic_inf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Carscapes.resx">
       <DependentUpon>Carscapes.cs</DependentUpon>
@@ -284,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="zayavki.resx">
       <DependentUpon>zayavki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zayavki_table.resx">
+      <DependentUpon>zayavki_table.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
