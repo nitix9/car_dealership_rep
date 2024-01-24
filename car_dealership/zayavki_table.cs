@@ -43,6 +43,7 @@ namespace car_dealership
         {
             if (e.ColumnIndex == 0)
             {
+                carstore.index = e.RowIndex;
                 applic_inf forma = new applic_inf(this);
                 forma.Show();
             }
