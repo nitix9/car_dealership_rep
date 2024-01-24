@@ -162,7 +162,7 @@ namespace car_dealership
             this.but_cancel.TabIndex = 10;
             this.but_cancel.Text = "Отклонить";
             this.but_cancel.UseVisualStyleBackColor = false;
-            this.but_cancel.Click += new System.EventHandler(this.but_cancel_Click) ;
+            this.but_cancel.Click += new System.EventHandler(this.but_cancel_Click);
             // 
             // pictureBox2
             // 
@@ -240,6 +240,7 @@ namespace car_dealership
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "applic_inf";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "applic_inf";
             this.Shown += new System.EventHandler(this.applic_inf_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
