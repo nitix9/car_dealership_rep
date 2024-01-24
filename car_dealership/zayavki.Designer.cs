@@ -148,6 +148,7 @@ namespace car_dealership
             this.Controls.Add(this.name);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "zayavki";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "zayavki";
             this.ResumeLayout(false);
             this.PerformLayout();
